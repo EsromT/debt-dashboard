@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# National Debt Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Description
 
-## Available Scripts
+The National Debt Dashboard provides real-time insights into the U.S. national debt. This web application fetches data from various external APIs and presents it in a user-friendly dashboard. Users can explore data regarding public debt transactions, debt subject to limits, operating cash balance, and other financial data from the U.S. Treasury Department.
 
-In the project directory, you can run:
+The application visualizes the data using interactive charts, making it easier for users to understand the trends in national debt over time.
 
-### `npm start`
+## Target Browsers
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This application is designed to work on modern desktop and mobile browsers, including:
+- Google Chrome (latest version)
+- Mozilla Firefox (latest version)
+- Safari (latest version)
+- Microsoft Edge
+- Mobile devices on iOS (Safari) and Android (Chrome)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Developer Manual
 
-### `npm test`
+This section provides technical instructions for developers working on this project. For detailed steps on setting up the project locally and working on it, see the [Developer Manual](#developer-manual) section below.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### How to Install the Application and Dependencies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository to your local machine:
+   ```bash
+   git clone https://github.com/EsromT/debt-dashboard.git
+   cd debt-dashboard
+Install the necessary dependencies for both the backend and frontend:
+For frontend:
+bash
+Copy code
+cd frontend
+npm install
+For backend:
+bash
+Copy code
+cd backend
+npm install
+How to Run the Application on a Server
+Frontend: To run the React frontend, go to the frontend folder and run the following command:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+bash
+Copy code
+npm start
+This will start the development server on http://localhost:3000.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Backend: To run the Node.js backend, go to the backend folder and run the following command:
 
-### `npm run eject`
+bash
+Copy code
+node server.js
+This will start the server on http://localhost:5000.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+How to Run Tests
+If you have written tests (or want to add your own in the future), you can run them using the following command:
+bash
+Copy code
+npm test
+This will run the tests defined in the src folder of the frontend.
+API Documentation
+Here are the main API endpoints of the backend:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+GET /api/debt
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Retrieves public debt transaction data from the U.S. Treasury API.
+Returns data in the form of dates and corresponding debt amounts.
+POST /api/debt
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+You can define POST endpoints if needed for data manipulation or adding records.
+Known Bugs
+The DebtDashboard component occasionally fails to fetch data from the API if the external source is down.
+Styling issues may occur in older versions of browsers like Internet Explorer. Please ensure your application is tested on modern browsers.
+Roadmap for Future Development
+Additional Data Visualizations: Add more interactive charts to visualize the data in more formats (e.g., bar charts, pie charts).
+User Authentication: Implement user authentication for personalized debt insights.
+Data Export: Allow users to export data in CSV or Excel formats for offline use.
+Mobile Responsiveness: Improve the mobile responsiveness for a better experience on mobile devices.
